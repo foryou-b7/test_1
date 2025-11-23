@@ -1,0 +1,52 @@
+{
+  "name": "redrock-cli",
+  "version": "0.1.5",
+  "license": "MIT",
+  "type": "module",
+  "author": "Nirvana-Jie(Wenjie Zeng)",
+  "contributors": [
+    {
+      "name": "Lomirus",
+      "email": "lomirus.dev@protonmail.com",
+      "url": "https://lomirus.github.io/"
+    },
+    {
+      "name": "chovrio",
+      "email": "1480733667@qq.com",
+      "url": "https://www.chovrio.club/hexo/"
+    }
+  ],
+  "bin": {
+    "redrock-cli": "index.js",
+    "redrock": "index.js"
+  },
+  "description": "core module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "unbuild --stub",
+    "test": "pnpm run dev && npm link",
+    "build": "unbuild",
+    "release": "pnpm run build && npm publish"
+  },
+  "files": [
+    "index.js",
+    "template-*",
+    "build"
+  ],
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "keywords": [
+    "redrock-fe",
+    "core"
+  ],
+  "dependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "commander": "^9.4.0",
+    "cross-spawn": "^7.0.3",
+    "js-yaml": "^4.1.0",
+    "kolorist": "^1.6.0",
+    "minimist": "^1.2.6",
+    "prompts": "^2.4.2"
+  }
+}
